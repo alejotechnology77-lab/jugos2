@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
+    const ctaButton = document.querySelector('.cta-button');
     const contentSections = document.querySelectorAll('.content-section');
+    const nextSectionBtns = document.querySelectorAll('.next-section-btn');
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-links');
 
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
             targetSection.classList.add('active');
         }
 
-        // Remover 'active' de todos los enlaces y agregarlo al seleccionado
         navLinks.forEach(link => {
             link.classList.remove('active');
         });
@@ -30,14 +31,31 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = link.getAttribute('data-target');
             showSection(targetId);
-            // Ocultar el menú en móviles después de la selección
             navMenu.classList.remove('show');
+            menuToggle.classList.remove('active');
+        });
+    });
+
+    // Manejar el clic en el botón "Ver Colección"
+    ctaButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = ctaButton.getAttribute('data-target');
+        showSection(targetId);
+    });
+
+    // Manejar el clic en los botones de "Siguiente Sección"
+    nextSectionBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = btn.getAttribute('data-target');
+            showSection(targetId);
         });
     });
 
     // Manejar el clic en el botón de menú hamburguesa
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('show');
+        menuToggle.classList.toggle('active');
     });
 
     // Mostrar la primera sección al cargar la página

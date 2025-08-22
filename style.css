@@ -399,15 +399,29 @@ body {
     .navbar {
         flex-direction: column;
         text-align: center;
+        padding: 1.5rem;
     }
 
     .nav-links {
         margin-top: 1rem;
         gap: 1.5rem;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
     }
     
     .logo-container {
         height: 50px;
+        position: absolute;
+        left: 20px;
+        top: 15px;
     }
 
     .main-title {
