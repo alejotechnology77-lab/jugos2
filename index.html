@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mina Ropa & Accesorios</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <img src="logo1.jpg" alt="Logo Mina" class="logo" />
-        <h1 class="title">MINA Ropa & Accesorios</h1>
-        <nav>
+    <!-- Encabezado -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo1.jpg" alt="Logo Mina">
+            </div>
             <ul class="nav-links">
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a class="nav-link" data-target="home-content" href="#">Inicio</a></li>
+                <li><a class="nav-link" data-target="products-content" href="#">Productos</a></li>
+                <li><a class="nav-link" data-target="offers-content" href="#">Ofertas</a></li>
+                <li><a class="nav-link" data-target="contact-content" href="#">Contacto</a></li>
             </ul>
+            <div class="menu-toggle">☰</div>
         </nav>
     </header>
 
     <!-- Banner principal -->
-    <section class="hero">
-        <h2>Estilo urbano, calidad garantizada</h2>
-        <p>Descubre la mejor colección de ropa y accesorios a precios increíbles</p>
-        <a href="#productos" class="btn">Ver colección</a>
+    <section id="home-content" class="content-section active">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>MINA Ropa & Accesorios</h1>
+                <p>Descubre la mejor colección de ropa urbana, accesorios y pijamas modernas.</p>
+                <a href="#products-content" class="btn">Ver colección</a>
+            </div>
+            <div class="hero-img">
+                <img src="img/pijama1.jpg" alt="Pijama Mina">
+            </div>
+        </div>
     </section>
 
     <!-- Productos -->
-    <section id="productos" class="productos">
+    <section id="products-content" class="content-section">
         <h2>Nuestros Productos</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="pijama1.jpg" alt="Pijama Urban" />
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="img/pijama1.jpg" alt="Pijama Urban">
                 <h3>Pijama Urban</h3>
                 <p>Pijama de algodón suave, perfecta para noches cómodas.</p>
-                <span class="precio">$65.000</span>
-                <button class="btn">Comprar</button>
+                <span class="price">$65.000</span>
+                <button class="btn-buy">Comprar</button>
             </div>
-            <div class="card">
-                <img src="pijama2.jpg" alt="Pijama Classic" />
+            <div class="product-card">
+                <img src="img/pijama2.jpg" alt="Pijama Classic">
                 <h3>Pijama Classic</h3>
                 <p>Diseño elegante y fresco para mayor confort.</p>
-                <span class="precio">$59.000</span>
-                <button class="btn">Comprar</button>
+                <span class="price">$70.000</span>
+                <button class="btn-buy">Comprar</button>
             </div>
-            <div class="card">
-                <img src="camiseta1.jpg" alt="Camiseta Street" />
-                <h3>Camiseta Street</h3>
-                <p>Camiseta 100% algodón, ideal para tu outfit urbano.</p>
-                <span class="precio">$45.000</span>
-                <button class="btn">Comprar</button>
-            </div>
-            <div class="card">
-                <img src="accesorio1.jpg" alt="Gorra Snapback" />
-                <h3>Gorra Snapback</h3>
-                <p>Diseño moderno con bordado de alta calidad.</p>
-                <span class="precio">$39.000</span>
-                <button class="btn">Comprar</button>
+            <div class="product-card">
+                <img src="img/pijama3.jpg" alt="Pijama Comfort">
+                <h3>Pijama Comfort</h3>
+                <p>El balance perfecto entre estilo y comodidad.</p>
+                <span class="price">$68.000</span>
+                <button class="btn-buy">Comprar</button>
             </div>
         </div>
     </section>
 
     <!-- Ofertas -->
-    <section id="ofertas" class="ofertas">
-        <h2>Ofertas Exclusivas</h2>
-        <p>¡Llévate hasta un 30% de descuento en pijamas y camisetas seleccionadas!</p>
-        <a href="#productos" class="btn">Aprovechar ahora</a>
+    <section id="offers-content" class="content-section">
+        <h2>Ofertas Especiales</h2>
+        <p>¡Aprovecha los descuentos exclusivos en pijamas, camisetas y accesorios!</p>
+        <div class="offers-banner">
+            <img src="img/pijama4.jpg" alt="Ofertas">
+        </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="contacto">
+    <section id="contact-content" class="content-section">
         <h2>Contáctanos</h2>
-        <p>¿Tienes dudas o quieres hacer un pedido?</p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/573001234567" target="_blank">+57 300 123 4567</a></p>
-        <p><strong>Email:</strong> ventas@minaropa.com</p>
+        <p>¿Tienes dudas o quieres hacer un pedido personalizado? Escríbenos.</p>
+        <a href="mailto:contacto@mina.com" class="btn">Enviar Correo</a>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 Mina Ropa & Accesorios | Todos los derechos reservados</p>
+    <footer>
+        <p>&copy; 2025 Mina Ropa & Accesorios - Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
