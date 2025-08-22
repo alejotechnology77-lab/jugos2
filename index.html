@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MINA ROPA Y ACCESORIOS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -12,18 +15,18 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo-container">
-                <a href="#"><img src="./img/logo1.jpg" alt="Logo principal de MINA ROPA Y ACCESORIOS" class="logo logo-1"></a>
-                <a href="#"><img src="./img/logo2.jpg" alt="Logo secundario de MINA ROPA Y ACCESORIOS" class="logo logo-2"></a>
+                <a href="#"><img src="./img/logo1.jpg" alt="Logo principal de MINA" class="logo logo-1"></a>
+                <a href="#"><img src="./img/logo2.jpg" alt="Logo secundario de MINA" class="logo logo-2"></a>
             </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link active" data-target="home-content">Inicio</a></li>
-                <li><a href="#ropa" class="nav-link" data-target="ropa-content">Ropa</a></li>
-                <li><a href="#accesorios" class="nav-link" data-target="accesorios-content">Accesorios</a></li>
-                <li><a href="#pijamas" class="nav-link" data-target="pijamas-content">Pijamas</a></li>
-                <li><a href="#about" class="nav-link" data-target="about-content">Nosotros</a></li>
+                <li><a href="#home-content" class="nav-link active" data-target="home-content"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#ropa-content" class="nav-link" data-target="ropa-content"><i class="fas fa-tshirt"></i> Ropa</a></li>
+                <li><a href="#accesorios-content" class="nav-link" data-target="accesorios-content"><i class="fas fa-hat-cowboy"></i> Accesorios</a></li>
+                <li><a href="#pijamas-content" class="nav-link" data-target="pijamas-content"><i class="fas fa-bed"></i> Pijamas</a></li>
+                <li><a href="#about-content" class="nav-link" data-target="about-content"><i class="fas fa-info-circle"></i> Nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -31,10 +34,10 @@
     <main class="main-content">
         <div id="home-content" class="content-section active">
             <section class="hero-section">
-                <div class="hero-text">
-                    <h1>MINA ROPA Y ACCESORIOS</h1>
-                    <p>El Estilo Urbano Que Habla Por Ti.</p>
-                    <a href="#ropa" class="cta-button">Ver Colección</a>
+                <div class="hero-content">
+                    <h1 class="main-title">MINA ROPA Y ACCESORIOS</h1>
+                    <p class="subtitle">El Estilo Urbano Que Habla Por Ti</p>
+                    <a href="#ropa-content" class="cta-button">VER COLECCIÓN</a>
                 </div>
             </section>
         </div>
@@ -42,48 +45,107 @@
         <div id="ropa-content" class="content-section">
             <section class="product-section">
                 <h2 class="section-title">Nuestra Colección de Ropa</h2>
-                <div class="product-grid">
+                <div class="products-grid">
                     <div class="product-card">
-                        <img src="./img/ropa-1.jpg" alt="Chaqueta Urbana" class="product-image">
+                        <div class="product-image-container">
+                            <img src="./img/ropa-1.jpg" alt="Chaqueta Urbana" class="product-image">
+                        </div>
                         <div class="product-info">
-                            <h3>Chaqueta "City Vibe"</h3>
+                            <h3 class="product-name">Chaqueta “Night Rider”</h3>
                             <p class="product-price">$65.000 COP</p>
-                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20chaqueta%20City%20Vibe." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20chaqueta%20City%20Vibe." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
+                <a href="#accesorios-content" class="next-section-btn">Siguiente Sección <i class="fas fa-arrow-down"></i></a>
             </section>
         </div>
         
         <div id="accesorios-content" class="content-section">
             <section class="product-section">
                 <h2 class="section-title">Accesorios Para tu Look</h2>
-                <div class="product-grid">
+                <div class="products-grid">
                     <div class="product-card">
-                        <img src="./img/accesorio-1.jpg" alt="Gafas de Sol Urbanas" class="product-image">
+                        <div class="product-image-container">
+                            <img src="./img/accesorio-1.jpg" alt="Gafas de sol" class="product-image">
+                        </div>
                         <div class="product-info">
-                            <h3>Gafas "Night Walker"</h3>
+                            <h3 class="product-name">Gafas "Urban Vibe"</h3>
                             <p class="product-price">$30.000 COP</p>
-                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesan%20las%20gafas%20Night%20Walker." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesan%20las%20gafas%20Night%20Walker." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
+                <a href="#pijamas-content" class="next-section-btn">Siguiente Sección <i class="fas fa-arrow-down"></i></a>
             </section>
         </div>
 
         <div id="pijamas-content" class="content-section">
             <section class="product-section">
                 <h2 class="section-title">Pijamas con Estilo y Confort</h2>
-                <div class="product-grid">
+                <div class="products-grid">
                     <div class="product-card">
-                        <img src="./img/pijama1.jpg" alt="Pijama 1" class="product-image">
+                        <div class="product-image-container">
+                            <img src="./img/pijama1.jpg" alt="Pijama 1" class="product-image">
+                        </div>
                         <div class="product-info">
-                            <h3>Pijama "Dreamy Cloud"</h3>
+                            <h3 class="product-name">Pijama "Dreamy Cloud"</h3>
                             <p class="product-price">$45.000 COP</p>
-                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%201." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%201." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./img/pijama2.jpg" alt="Pijama 2" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pijama "Moonlight"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%202." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./img/pijama3.jpg" alt="Pijama 3" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pijama "Stardust"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%203." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./img/pijama4.jpg" alt="Pijama 4" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pijama "Comfy"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%204." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./img/pijama5.jpg" alt="Pijama 5" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pijama "Cozy"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%205." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="./img/pijama6.jpg" alt="Pijama 6" class="product-image">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pijama "Relax"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%206." target="_blank" class="buy-button">Comprar <i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>
                 </div>
+                <a href="#about-content" class="next-section-btn">Siguiente Sección <i class="fas fa-arrow-down"></i></a>
             </section>
         </div>
 
@@ -95,23 +157,8 @@
                     <h3>Nuestros Materiales</h3>
                     <p>Nuestras prendas son **fabricadas en tela brush**, una mezcla de **97% poliéster y 7% elastano**, lo que garantiza una suavidad excepcional, durabilidad y un ajuste perfecto que te hará sentir cómodo y con estilo todo el día.</p>
                 </div>
+                <a href="#home-content" class="next-section-btn">Volver al Inicio <i class="fas fa-arrow-up"></i></a>
             </section>
         </div>
-        
+
     </main>
-
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="https://wa.me/573234405025" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="https://www.instagram.com/minaventasoficial/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/14Pn61ZGjtT/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
-        </div>
-        <div class="footer-contact">
-            <p>Correo de contacto: <a href="mailto:minaropayaccesorios01@gmail.com">minaropayaccesorios01@gmail.com</a></p>
-        </div>
-        <p class="copyright">&copy; 2025 MINA ROPA Y ACCESORIOS. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
