@@ -3,87 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Ropa & Accesorios</title>
+    <title>MINA ROPA Y ACCESORIOS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
+
+    <header class="header">
         <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo1.jpg" alt="Logo Mina">
+            <div class="logo-container">
+                <a href="#"><img src="./img/logo1.jpg" alt="Logo principal de MINA ROPA Y ACCESORIOS" class="logo logo-1"></a>
+                <a href="#"><img src="./img/logo2.jpg" alt="Logo secundario de MINA ROPA Y ACCESORIOS" class="logo logo-2"></a>
             </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
-                <li><a class="nav-link" data-target="home-content" href="#">Inicio</a></li>
-                <li><a class="nav-link" data-target="products-content" href="#">Productos</a></li>
-                <li><a class="nav-link" data-target="offers-content" href="#">Ofertas</a></li>
-                <li><a class="nav-link" data-target="contact-content" href="#">Contacto</a></li>
+                <li><a href="#home" class="nav-link active" data-target="home-content">Inicio</a></li>
+                <li><a href="#ropa" class="nav-link" data-target="ropa-content">Ropa</a></li>
+                <li><a href="#accesorios" class="nav-link" data-target="accesorios-content">Accesorios</a></li>
+                <li><a href="#pijamas" class="nav-link" data-target="pijamas-content">Pijamas</a></li>
+                <li><a href="#about" class="nav-link" data-target="about-content">Nosotros</a></li>
             </ul>
-            <div class="menu-toggle">☰</div>
         </nav>
     </header>
 
-    <!-- Banner principal -->
-    <section id="home-content" class="content-section active">
-        <div class="hero">
-            <div class="hero-text">
-                <h1>MINA Ropa & Accesorios</h1>
-                <p>Descubre la mejor colección de ropa urbana, accesorios y pijamas modernas.</p>
-                <a href="#products-content" class="btn">Ver colección</a>
-            </div>
-            <div class="hero-img">
-                <img src="img/pijama1.jpg" alt="Pijama Mina">
-            </div>
+    <main class="main-content">
+        <div id="home-content" class="content-section active">
+            <section class="hero-section">
+                <div class="hero-text">
+                    <h1>MINA ROPA Y ACCESORIOS</h1>
+                    <p>El Estilo Urbano Que Habla Por Ti.</p>
+                    <a href="#ropa" class="cta-button">Ver Colección</a>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Productos -->
-    <section id="products-content" class="content-section">
-        <h2>Nuestros Productos</h2>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="img/pijama1.jpg" alt="Pijama Urban">
-                <h3>Pijama Urban</h3>
-                <p>Pijama de algodón suave, perfecta para noches cómodas.</p>
-                <span class="price">$65.000</span>
-                <button class="btn-buy">Comprar</button>
-            </div>
-            <div class="product-card">
-                <img src="img/pijama2.jpg" alt="Pijama Classic">
-                <h3>Pijama Classic</h3>
-                <p>Diseño elegante y fresco para mayor confort.</p>
-                <span class="price">$70.000</span>
-                <button class="btn-buy">Comprar</button>
-            </div>
-            <div class="product-card">
-                <img src="img/pijama3.jpg" alt="Pijama Comfort">
-                <h3>Pijama Comfort</h3>
-                <p>El balance perfecto entre estilo y comodidad.</p>
-                <span class="price">$68.000</span>
-                <button class="btn-buy">Comprar</button>
-            </div>
+        <div id="ropa-content" class="content-section">
+            <section class="product-section">
+                <h2 class="section-title">Nuestra Colección de Ropa</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="./img/ropa-1.jpg" alt="Chaqueta Urbana" class="product-image">
+                        <div class="product-info">
+                            <h3>Chaqueta "City Vibe"</h3>
+                            <p class="product-price">$65.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20chaqueta%20City%20Vibe." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-
-    <!-- Ofertas -->
-    <section id="offers-content" class="content-section">
-        <h2>Ofertas Especiales</h2>
-        <p>¡Aprovecha los descuentos exclusivos en pijamas, camisetas y accesorios!</p>
-        <div class="offers-banner">
-            <img src="img/pijama4.jpg" alt="Ofertas">
+        
+        <div id="accesorios-content" class="content-section">
+            <section class="product-section">
+                <h2 class="section-title">Accesorios Para tu Look</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="./img/accesorio-1.jpg" alt="Gafas de Sol Urbanas" class="product-image">
+                        <div class="product-info">
+                            <h3>Gafas "Night Walker"</h3>
+                            <p class="product-price">$30.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesan%20las%20gafas%20Night%20Walker." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Contacto -->
-    <section id="contact-content" class="content-section">
-        <h2>Contáctanos</h2>
-        <p>¿Tienes dudas o quieres hacer un pedido personalizado? Escríbenos.</p>
-        <a href="mailto:contacto@mina.com" class="btn">Enviar Correo</a>
-    </section>
+        <div id="pijamas-content" class="content-section">
+            <section class="product-section">
+                <h2 class="section-title">Pijamas con Estilo y Confort</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="./img/pijama1.jpg" alt="Pijama 1" class="product-image">
+                        <div class="product-info">
+                            <h3>Pijama "Dreamy Cloud"</h3>
+                            <p class="product-price">$45.000 COP</p>
+                            <a href="https://wa.me/573234405025?text=¡Hola!%20Me%20interesa%20la%20pijama%201." target="_blank" class="whatsapp-buy-btn">Comprar por WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Mina Ropa & Accesorios - Todos los derechos reservados.</p>
+        <div id="about-content" class="content-section">
+            <section class="about-section">
+                <h2 class="section-title">Acerca de Nosotros</h2>
+                <div class="about-content">
+                    <p>En **MINA ROPA Y ACCESORIOS**, nos dedicamos a ofrecerte ropa y accesorios con el mejor estilo urbano y la más alta calidad.</p>
+                    <h3>Nuestros Materiales</h3>
+                    <p>Nuestras prendas son **fabricadas en tela brush**, una mezcla de **97% poliéster y 7% elastano**, lo que garantiza una suavidad excepcional, durabilidad y un ajuste perfecto que te hará sentir cómodo y con estilo todo el día.</p>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://wa.me/573234405025" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.instagram.com/minaventasoficial/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/share/14Pn61ZGjtT/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+        <div class="footer-contact">
+            <p>Correo de contacto: <a href="mailto:minaropayaccesorios01@gmail.com">minaropayaccesorios01@gmail.com</a></p>
+        </div>
+        <p class="copyright">&copy; 2025 MINA ROPA Y ACCESORIOS. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
