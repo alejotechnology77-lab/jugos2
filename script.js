@@ -36,12 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Manejar el clic en el botón "Ver Colección"
-    ctaButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = ctaButton.getAttribute('data-target');
-        showSection(targetId);
-    });
+    // Manejar el clic en el botón "Ver Jugos"
+    if (ctaButton) {
+        ctaButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = ctaButton.getAttribute('data-target');
+            showSection(targetId);
+        });
+    }
 
     // Manejar el clic en los botones de "Siguiente Sección"
     nextSectionBtns.forEach(btn => {

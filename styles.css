@@ -1,12 +1,12 @@
 /* Variables de color y tipografía */
 :root {
-    --color-dark-primary: #121212;
-    --color-dark-secondary: #1e1e1e;
-    --color-light-text: #ffffff;
-    --color-accent: #ff0080; /* Fucsia neón */
-    --color-accent-dark: #b3005b;
-    --color-gray: #a1a1a1;
-    --font-title: 'Montserrat', sans-serif;
+    --color-primary: #1F2D1F; /* Verde oscuro */
+    --color-secondary: #2E452E; /* Verde medio */
+    --color-accent: #86A878; /* Verde claro */
+    --color-accent-hover: #6E8862; /* Verde claro más oscuro */
+    --color-text-light: #F0F2EB; /* Gris claro para texto */
+    --color-text-dark: #121212;
+    --font-title: 'Playfair Display', serif;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -16,8 +16,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-body);
-    color: var(--color-light-text);
-    background: linear-gradient(135deg, var(--color-dark-primary) 0%, var(--color-dark-secondary) 100%);
+    color: var(--color-text-light);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -25,7 +25,7 @@ body {
 /* Header y Navbar */
 .header {
     width: 100%;
-    background-color: rgba(18, 18, 18, 0.9);
+    background-color: rgba(31, 45, 31, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -49,7 +49,7 @@ body {
 
 .logo {
     height: 100%;
-    filter: brightness(1.2);
+    filter: none; /* Quitamos el filtro */
     transition: transform 0.3s ease;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     text-decoration: none;
     font-family: var(--font-heading);
     font-weight: 600;
@@ -113,7 +113,7 @@ body {
     display: none; /* Oculto por defecto en escritorio */
     background: none;
     border: none;
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -146,7 +146,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('./img/hero-background.jpg') no-repeat center center/cover;
+    background: url('./img/hero-jugos.jpg') no-repeat center center/cover;
     position: relative;
 }
 
@@ -157,8 +157,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(1px);
 }
 
 .hero-content {
@@ -166,30 +166,19 @@ body {
     z-index: 2;
 }
 
-/* Efecto neón en el título */
+/* Estilo para el título de jugos */
 .main-title {
     font-family: var(--font-title);
     font-size: 5rem;
-    color: var(--color-light-text);
-    text-shadow:
-        0 0 5px var(--color-light-text),
-        0 0 10px var(--color-light-text),
-        0 0 20px var(--color-accent),
-        0 0 40px var(--color-accent),
-        0 0 80px var(--color-accent),
-        0 0 90px var(--color-accent);
-    animation: neonGlow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-    from { text-shadow: 0 0 5px var(--color-light-text), 0 0 10px var(--color-light-text), 0 0 20px var(--color-accent), 0 0 40px var(--color-accent); }
-    to { text-shadow: 0 0 10px var(--color-light-text), 0 0 20px var(--color-light-text), 0 0 30px var(--color-accent), 0 0 50px var(--color-accent), 0 0 70px var(--color-accent); }
+    color: var(--color-text-light);
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    animation: none; /* Quitamos el efecto neón */
 }
 
 .subtitle {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--color-gray);
+    color: var(--color-text-light);
     margin-top: 0;
     text-transform: uppercase;
 }
@@ -197,22 +186,22 @@ body {
 .cta-button {
     display: inline-block;
     background: var(--color-accent);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     padding: 1rem 2.5rem;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     border-radius: 50px;
     margin-top: 2rem;
-    box-shadow: 0 5px 15px rgba(255, 0, 128, 0.4);
+    box-shadow: 0 5px 15px rgba(134, 168, 120, 0.4);
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background: var(--color-light-text);
-    color: var(--color-accent);
+    background: var(--color-accent-hover);
+    color: var(--color-text-light);
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(255, 0, 128, 0.6);
+    box-shadow: 0 8px 20px rgba(134, 168, 120, 0.6);
 }
 
 /* Sección de Productos */
@@ -220,18 +209,18 @@ body {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    background: linear-gradient(to bottom, var(--color-dark-secondary), var(--color-dark-primary));
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
     border-radius: 15px;
     margin-bottom: 3rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    position: relative; /* Necesario para posicionar el botón */
+    position: relative;
 }
 
 .section-title {
     font-family: var(--font-title);
     font-size: 2.5rem;
     text-align: center;
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     margin-bottom: 3rem;
     position: relative;
 }
@@ -250,12 +239,14 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr; /* Una sola columna para un diseño más limpio */
     gap: 2rem;
+    max-width: 600px; /* Limitar el ancho del producto */
+    margin: 0 auto;
 }
 
 .product-card {
-    background-color: var(--color-dark-secondary);
+    background-color: var(--color-secondary);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -273,14 +264,14 @@ body {
 
 .product-image {
     width: 100%;
-    height: 300px;
+    height: auto; /* Ajustamos para que la imagen no se distorsione */
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 /* Efecto de zoom en la imagen */
 .product-card:hover .product-image {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .product-info {
@@ -290,22 +281,30 @@ body {
 
 .product-name {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
-    color: var(--color-light-text);
+    font-size: 1.5rem;
+    color: var(--color-text-light);
     margin-top: 0;
+}
+
+.product-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
 }
 
 .product-price {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    color: var(--color-gray);
+    font-size: 1.3rem;
+    color: var(--color-accent);
     font-weight: bold;
 }
 
 .buy-button {
     display: inline-block;
     background-color: var(--color-accent);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
@@ -314,7 +313,7 @@ body {
 }
 
 .buy-button:hover {
-    background-color: var(--color-accent-dark);
+    background-color: var(--color-accent-hover);
     transform: scale(1.05);
 }
 
@@ -322,40 +321,81 @@ body {
     margin-left: 8px;
 }
 
+/* Secciones de texto (Reseñas) */
+.about-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h3 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-content p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.review-card {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.review-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.review-author {
+    font-weight: bold;
+    text-align: right;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+
 /* Botón para siguiente sección */
 .next-section-btn {
     display: block;
     width: fit-content;
-    margin: 4rem auto 0; /* Centrar el botón */
+    margin: 4rem auto 0;
     padding: 1rem 2rem;
     background: var(--color-accent);
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     text-decoration: none;
     font-family: var(--font-heading);
     font-weight: bold;
     border-radius: 50px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+    box-shadow: 0 4px 15px rgba(134, 168, 120, 0.4);
 }
 
 .next-section-btn:hover {
     transform: translateY(-5px);
-    background: var(--color-accent-dark);
-    box-shadow: 0 8px 20px rgba(255, 0, 128, 0.6);
+    background: var(--color-accent-hover);
+    box-shadow: 0 8px 20px rgba(134, 168, 120, 0.6);
 }
 
 .next-section-btn i {
     margin-left: 10px;
 }
 
-
 /* Pie de página */
 .footer {
-    background-color: var(--color-dark-primary);
+    background-color: var(--color-primary);
     padding: 2rem;
     text-align: center;
-    border-top: 1px solid var(--color-dark-secondary);
+    border-top: 1px solid var(--color-secondary);
 }
 
 .footer-content {
@@ -368,7 +408,7 @@ body {
 }
 
 .social-icons a {
-    color: var(--color-light-text);
+    color: var(--color-text-light);
     font-size: 1.5rem;
     margin: 0 1rem;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -385,13 +425,13 @@ body {
 
 .contact-info p {
     margin: 0;
-    color: var(--color-gray);
+    color: var(--color-text-light);
     font-size: 0.9rem;
 }
 
 .copyright {
     font-size: 0.8rem;
-    color: var(--color-gray);
+    color: var(--color-text-light);
 }
 
 /* Optimización Responsive */
@@ -438,9 +478,5 @@ body {
 
     .section-title {
         font-size: 2rem;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
     }
 }
